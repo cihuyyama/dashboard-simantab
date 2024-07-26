@@ -13,7 +13,7 @@ import { TimeData } from '@/types/type'
 import { Separator } from './ui/separator'
 import { Lightbulb } from 'lucide-react'
 
-const Dashboard = () => {
+const DashboardWithHumidity = () => {
     const [data, setData] = React.useState<any>()
     const [humidityData, setHumidityData] = React.useState<TimeData[]>([]);
     const [temperatureData, setTemperatureData] = React.useState<TimeData[]>([]);
@@ -153,6 +153,8 @@ const Dashboard = () => {
                 </div>
             </div>
 
+            <HumidityChart data={humidityData} />
+
             <div className='flex flex-row justify-between'>
                 <Link
                     href={'https://play.google.com/store/apps/details?id=com.bencana.sleman&hl=id'}
@@ -172,4 +174,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard
+export default DashboardWithHumidity
